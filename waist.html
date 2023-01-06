@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="images.css">
+</head>
+<title>Images</title>
+
+<body>
+<div>
+    <img src="ginny-rose-stewart-UxkcSzRWM2s-unsplash.jpg" width="1400" height="600">
+</div>
+  <h1 id="demo"></h1>
+  <button class="block" onclick="bmi()">calculate</button>
+    
+    <script>
+        function bmi()
+        {
+            const waist=parseInt(prompt("enter your waist size in inches"));
+            const hip=parseInt(prompt("enter your hip size in inches"));
+
+            const sum = waist/hip;
+            if(sum>94)
+            document.getElementById("demo").innerHTML = "you are at high risk "+sum;
+            else
+            document.getElementById("demo").innerHTML = "you are at less risk "+sum;
+              
+                
+        }
+    </script>
+</body>
+
+</html>

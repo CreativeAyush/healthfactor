@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="images.css">
+</head>
+<title>Images</title>
+
+<body>
+    <div>
+        <img src="MeasuringBMI-1293501993-770x533-1.jpg" width="1400" height="500">
+    </div>
+  <h1 id="demo"></h1>
+  <button class="block" onclick="bmi()">calculate</button>
+    
+    <script>
+        function bmi()
+        {
+            const weight=parseInt(prompt("enter your weight in kg"));
+            const height=parseInt(prompt("enter your height in meters"));
+            const b=height*height;
+
+            const sum = weight/b;
+            if(sum<18.5)
+                {
+            document.getElementById("demo").innerHTML = "you are underweigth "+sum;
+                }
+            else if(sum>=18.5 || sum<=24.9)
+                {
+            document.getElementById("demo").innerHTML = "you are Normal "+sum;
+                }
+            else if(sum>=25.5 || sum<=29.9)
+                {
+            document.getElementById("demo").innerHTML = "you are Overweigth "+sum;
+                }
+            else if(sum>=30.5 || sum<=34.9)
+                {
+            document.getElementById("demo").innerHTML = "you are on Obesity level 1 "+sum;
+                }
+            else if(sum>35)
+                {
+            document.getElementById("demo").innerHTML = "you are on extremely Obesity stage please try to loose your weigth "+sum;
+                }
+        }
+    </script>
+</body>
+
+</html>

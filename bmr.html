@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="images.css">
+</head>
+<title>Images</title>
+
+<body>
+    <div>
+        <img src="exercising-with-1700-bmr-what-to-consider-1024x536.jpg" width="1400" height="500">
+    </div>
+  <h1 id="demo"></h1>
+  <button class="block" onclick="bmi()">calculate</button>
+    
+    <script>
+        function bmi()
+        {
+            const weight=parseInt(prompt("enter your weight in kg"));
+            const height=parseInt(prompt("enter your height in cm"));
+            const age=parseInt(prompt("enter yuur age in years"));
+            const bmr=88.362+(13.397*weight)+(4.799*height)-(5.677*age);
+            document.getElementById("demo").innerHTML = "your bmr is  "+bmr;
+             
+        }
+    </script>
+</body>
+
+</html>
+       
